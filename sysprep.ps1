@@ -9,7 +9,7 @@ Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
 #importing server manager for use
 Import-Module ServerManager
 #pulling in default roles for MICC server and installing all needed
-Import-Csv Roles.csv | foreach{Add-WindowsFeature $_.name  }
+Import-Csv C:\Roles.csv | foreach{Add-WindowsFeature $_.name  }
 #Installing UPdate module
 Install-Module PSWindowsUpdate
 #install all updates and reboot once done
