@@ -7,8 +7,9 @@ if "%1%" == "precustomization" (
   bcdedit.exe /set nx AlwaysOff
   reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 0 /f
   reg add HKLM\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters /v DisabledComponents /t REG_DWORD /d 255 /f
+  cd c:\
   curl -LJO https://raw.githubusercontent.com/walkanda/SysprepMICC/main/sysprep.ps1
   curl -LJO https://raw.githubusercontent.com/walkanda/SysprepMICC/main/Roles.csv
-  powershell -command .\sysprep.ps1
+  powershell -command c:\sysprep.ps1
   
 )
