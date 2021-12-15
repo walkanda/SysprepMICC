@@ -1,0 +1,1 @@
+SchTasks /Create /SC ONSTART /TN systemprepmicc /TR "cmd.exe /c cd /d \"c:\" & \"powershell.exe c:\sysprep.ps1" 
